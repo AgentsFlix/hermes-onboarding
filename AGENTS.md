@@ -22,13 +22,17 @@ Este repositório é um roteiro, não uma skill a instalar. Não copie este AGEN
 
 ### 1. Localizar a instalação ativa
 
+O Telegram é um canal do gateway: você continua sendo o Hermes, com as ferramentas que esta sessão expõe. Canal de entrada, processo do agente e terminal são camadas diferentes. A ausência de uma skill na lista significa que ela ainda precisa ser adicionada; a ausência do executável `hermes` no terminal não demonstra ausência das ferramentas nativas de skills.
+
+Comece pela descoberta das ferramentas da sessão. Use `skills_list` e `skill_view` quando disponíveis, e consulte o schema de `skill_manage` para adicionar a skill completa pela rota descrita em `docs/integracoes.md`. Se a plataforma expuser descoberta/carregamento de ferramentas, use esse recurso antes de concluir que elas estão ausentes. Não invente uma ferramenta que não está exposta, nem chame `skill_manage` com uma ação `install` inexistente.
+
 Use as ferramentas disponíveis no Hermes e metadados restritos para identificar versão, usuário de execução, perfil ativo, `HERMES_HOME` efetivo e pasta persistente de skills. O terminal pode rodar num ambiente diferente do processo que atende o chat: confirme que é o perfil certo antes de gravar ou instalar.
 
 Não presuma `/opt/data`, `/root/.hermes`, nome de container ou que o diretório atual seja a pasta do Hermes. Não crie `~/.hermes` no computador de um agente externo. Se houver mais de uma instalação e nenhuma evidência selecionar a que atende esta conversa, peça somente a escolha necessária.
 
-O uso preferido é diretamente no Hermes. Um agente externo só continua se já tiver acesso autorizado à instalação correta. Sem acesso, oriente a colar `PROMPT.md` na conversa do Hermes que já responde. Não peça senha root para este onboarding.
+O uso preferido é diretamente no Hermes, inclusive pelo Telegram. Não mande a pessoa colar o prompt de novo em outro canal só porque o CLI está ausente. Um agente externo só continua se já tiver acesso autorizado à instalação correta. Sem acesso, oriente a colar `PROMPT.md` na conversa do Hermes que já responde. Não peça senha root para este onboarding.
 
-Confirme que consegue ler/gravar os arquivos apropriados e executar a instalação de skills. Se faltar capacidade, informe a etapa afetada; não declare sucesso nem altere infraestrutura para contornar.
+Confirme que consegue ler/gravar os arquivos apropriados e executar a instalação de skills. Só conclua que falta capacidade depois de conferir a rota nativa e a rota de CLI quando disponível. Informe a ferramenta/operação ausente ou o erro observado, distinguindo instalação de skill de execução do inventário; não declare sucesso nem altere infraestrutura para contornar.
 
 ### 2. Conhecer e configurar
 

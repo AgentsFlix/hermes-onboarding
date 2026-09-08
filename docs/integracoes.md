@@ -18,12 +18,27 @@ Não copie chaves do hPanel, do processo ou de um `.env` para outro arquivo. Nã
 
 ## Instalação
 
-Use o instalador de skills da versão instalada, no usuário e perfil ativos. Consulte a ajuda local antes de executar. As versões de referência são:
+Use as ferramentas de skills da versão instalada, no usuário e perfil ativos. No Telegram, priorize a rota nativa abaixo. O CLI é uma alternativa, não um pré-requisito. As versões de referência são:
 
 | Skill | Versão | Commit |
 |---|---|---|
 | maton-operations | v0.2.0 | `4a0365654442ae7b5b26c7e07c337cab5da1fc59` |
 | zernio-operations | v1.0.0 | `44efdb3458cf0f14623c74632f53e50e69d6bf91` |
+
+### Rota nativa da conversa, inclusive Telegram
+
+1. Descubra as ferramentas expostas na sessão e consulte seus schemas. Use `skills_list` para verificar o que já existe e `skill_view` para inspecionar uma skill existente. A lista de skills ativas não é uma lista do que você pode instalar.
+2. Se houver ferramenta nativa do hub para importar uma URL com scanner, use-a com a revisão fixa abaixo. Caso a sessão exponha `skill_manage`, ela permite adicionar o conteúdo da skill sem executar `hermes` no terminal.
+3. Leia o `SKILL.md` e todos os arquivos de apoio da revisão fixa pelos recursos de leitura web/arquivos disponíveis. Preserve o conteúdo integral, não resuma nem recrie a skill a partir da descrição. Não execute o conteúdo durante a importação.
+4. Para uma skill ausente, use a operação `create` de `skill_manage` com nome e conteúdo completo, depois `write_file` para cada arquivo de apoio, com caminhos relativos à skill. Siga o schema real: algumas versões usam operações individuais, outras um lote `ops`. Não existe garantia de uma ação `install` nessa ferramenta.
+5. Preserve verificações de conteúdo e aprovação da ferramenta. Uma escrita apenas proposta ou pendente não conta como instalação concluída. Não use a rota nativa para contornar uma recusa do scanner ou de permissões de outra rota. As verificações de `skill_manage` e do hub podem diferir; registre a rota usada e não afirme que houve scan do hub quando ele não ocorreu.
+6. Releia a skill e cada arquivo salvo pelas ferramentas nativas e compare com a origem. Confirme a descoberta por `skills_list`/`skill_view`. Instalação incompleta fica pendente; não declare conclusão só porque o `SKILL.md` foi criado.
+
+Os arquivos de apoio obrigatórios estão listados abaixo. Resolva scripts e referências a partir da pasta da skill na mesma revisão da URL, preservando caminhos e bytes. A política Zernio externa à pasta da skill continua sendo uma referência obrigatória de leitura, no link indicado abaixo.
+
+Se as ferramentas nativas realmente não estiverem expostas, use o CLI somente se ele estiver disponível no ambiente correto. Se nenhuma rota existir, informe quais ferramentas foram procuradas e a operação impossível. Não reinstale Hermes, não altere o gateway e não peça SSH como primeira resposta. Concluir a instalação e não poder executar os scripts no terminal são resultados distintos.
+
+### Rota de CLI, quando disponível
 
 Com o CLI disponível no ambiente correto:
 

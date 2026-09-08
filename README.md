@@ -4,7 +4,7 @@ Seu Hermes já está funcionando. Agora ele vai conhecer você e ganhar as skill
 
 ## Como usar
 
-Abra a conversa do seu Hermes, no painel ou canal que você já usa, e cole o conteúdo de [PROMPT.md](PROMPT.md). Ele vai ler este repositório e conduzir a configuração. Não precisa clonar no seu computador.
+Abra a conversa do seu Hermes, pelo Telegram, pelo painel ou pelo canal que você já usa, e cole o conteúdo de [PROMPT.md](PROMPT.md). Ele vai ler este repositório e conduzir a configuração. O Telegram é o canal da conversa; as ferramentas nativas do Hermes podem adicionar skills mesmo quando o comando `hermes` não está disponível no terminal dessa sessão. Não precisa clonar no seu computador.
 
 Você precisa ter o Hermes respondendo e as variáveis `MATON_API_KEY` e `ZERNIO_API_KEY` já configuradas no hPanel da Hostinger. O Hermes precisa conseguir ler este repositório e acessar os arquivos e as ferramentas da própria instalação. Se esse acesso estiver indisponível, ele informa a etapa pendente.
 
