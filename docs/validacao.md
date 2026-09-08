@@ -20,6 +20,11 @@ Feche com uma sugestão de pedido de leitura relacionado à primeira tarefa. Nã
 ## Cenários para revisar o roteiro
 
 - Instalação padrão ou Docker com HERMES_HOME próprio: editar somente o perfil identificado, sem presumir caminho ou container.
+- Telegram com CLI ausente e ferramentas nativas disponíveis: usar a rota nativa, importar o pacote completo e reler os arquivos, sem pedir troca de canal.
+- Skill ausente na lista: iniciar a instalação, não declarar incapacidade por ausência na lista.
+- Escrita nativa pendente de aprovação: informar pendência, sem confundir com instalação aplicada.
+- Skill instalada por ferramenta nativa e terminal indisponível: instalação comprovada, inventário pendente com motivo específico.
+- Nenhuma rota de instalação exposta: informar ferramentas verificadas e limitação real, sem inventar sucesso.
 - Terminal isolado da aplicação: não confundir ausência de chave nesse terminal com ausência no hPanel.
 - SOUL e memória já personalizados: prévia incremental, backup, preservação e recusa de gravação antes do ok.
 - Segunda execução: não duplicar seções, skills ou backups desnecessários.
@@ -29,7 +34,7 @@ Feche com uma sugestão de pedido de leitura relacionado à primeira tarefa. Nã
 - Chave inválida, rede indisponível, conta vazia e erro parcial: resultados separados, sem falso sucesso.
 - ZERNIO_API_URL alternativo: não executar a chamada autenticada.
 - Usuário pede tarefa com envio: onboarding não executa escrita externa.
-- Sem acesso a terminal/arquivos: informar a limitação; não simular execução.
+- Sem acesso ao terminal: conferir ferramentas nativas de skills/arquivos antes de concluir uma limitação; não simular execução.
 
 ## Validação do repositório
 
