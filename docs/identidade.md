@@ -21,6 +21,8 @@ Aceite pular uma resposta e preserve o padrão existente nesse caso. Não transf
 
 Para preferências da pessoa, use o mecanismo de memória de usuário reconhecido pela versão instalada. Confira o caminho efetivamente carregado: em versões atuais, o perfil de usuário usa `memories/USER.md` dentro do Hermes home. Não crie um `USER.md` na raiz só porque outro instalador o fazia. Preserve conteúdo preexistente e limites de memória da versão. Se não puder comprovar o destino, mantenha esta parte pendente e não crie arquivo que o Hermes não lê.
 
+Prefira a ferramenta nativa `memory`, com destino `user`, para aplicar as preferências aprovadas. Respeite o scanner e os limites de tamanho. Memória cheia fica pendente: não apague outras lembranças para abrir espaço sem combinar isso na prévia. Não edite o arquivo diretamente para contornar um bloqueio da ferramenta.
+
 Registre idioma e fuso como preferências. Não altere o fuso do sistema ou invente chaves no `config.yaml` para isso. A primeira tarefa orienta o uso, não vira cron nem autorização permanente de escrita.
 
 ## Prévia e gravação
